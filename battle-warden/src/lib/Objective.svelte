@@ -12,7 +12,7 @@
 <style>
     .column{
         flex-grow:1;
-        border: 2px solid #808080;
+        border: 2px solid rgba(255, 255, 255, 0.438);
     }
    
 </style>

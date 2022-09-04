@@ -1,6 +1,11 @@
 <script>
 	import Player from './Player.svelte';
 	import Banner from './Banner.svelte';
+
+	import { player1 } from '$lib/stores';
+    import { player2 } from '$lib/stores';
+
+
 </script>
 
 
@@ -10,15 +15,15 @@
 
 <div class='background'>
 	<div class='split left'>
-		<Player playerName="Matt"/>
+		<Player playerName="{$player1}"/>
 	</div>
 	<div  class='split right'>
-		<Player playerName="Conor"/>
+		<Player playerName="{$player2}"/>
 	</div>
 </div>
 
 <style>
-
+	
 
 	.split {
 	height: 100%;

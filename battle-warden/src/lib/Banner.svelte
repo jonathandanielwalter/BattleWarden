@@ -16,22 +16,18 @@
 </div>
 
   <style>
-
-      .ender{
-         border-radius: 50%;
-         float: right; 
-      }
-
       .header {
         padding: 60px;
-        background-color: #485461;
-        background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
-        color: white;
+        /* background-color: #485461; */
+        /* background-image: linear-gradient(315deg, #485461 0%, #28313b 74%); */
+        color: #ccc;
         font-size: 30px;
         justify-content: center;
         display : flex;
         flex-direction: column;
         align-items: center;
+        border: 5px;
+        border-color: black;
         }
 
 

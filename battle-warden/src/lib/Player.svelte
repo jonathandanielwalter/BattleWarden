@@ -18,6 +18,7 @@
 <div class="center">
 	<Counter vp label={"Command Points"} />
 </div>
+<br>
 <div class="objectives">
 	<Objectives bind:vp={vp}/>
 </div>
@@ -25,7 +26,7 @@
 <style>
 	.center {
 		height: 20%;
-		border: 5px solid #808080;
+		border: 5px solid rgba(255, 255, 255, 0.438);
 		text-align: center;
 	}
 
