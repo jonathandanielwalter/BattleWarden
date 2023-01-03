@@ -2,8 +2,7 @@
 	import Player from './Player.svelte';
 	import Banner from './Banner.svelte';
 
-	import { player1 } from '$lib/stores';
-    import { player2 } from '$lib/stores';
+	import { player1Name, player2Name, player1Vp, player2Vp } from '$lib/stores.js';
 
 
 </script>
@@ -15,10 +14,10 @@
 
 <div class='background'>
 	<div class='split left'>
-		<Player playerName="{$player1}"/>
+		<Player playerName="{$player1Name}" vp={player1Vp}/>
 	</div>
 	<div  class='split right'>
-		<Player playerName="{$player2}"/>
+		<Player playerName="{$player2Name}" vp={player2Vp}/>
 	</div>
 </div>
 

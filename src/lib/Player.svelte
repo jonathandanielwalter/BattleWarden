@@ -2,13 +2,21 @@
 	import Counter from './Counter.svelte';
     import Objectives from './Objectives.svelte'
     export let playerName
-	export let vp = 0
+	export let vp
+
+
+	let countValue;
+
+	vp.subscribe(value => {
+		countValue = value;
+	});
+
 </script>
 
 <h1 class="center-no-border">{playerName}</h1>
 
 
-<h1 class="center-no-border">Total Victory Points: {vp}</h1>
+<h1 class="center-no-border">Total Victory Points: {countValue}</h1>
 
 <div class="center">
 	<Counter bind:vp={vp} label={"Main Objective Victory Points"} />

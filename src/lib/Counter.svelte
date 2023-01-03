@@ -5,14 +5,20 @@
 
     function incriment(){
         count += 1
-        vp = vp + 1
+        // vp = vp + 1
+        if(label != "Command Points"){
+            vp.update(n => n + 1)
+        }
+       
     }
     function decrement(){
         if( count - 1 < 0){
             count = 0
         }else{
             count -= 1
-            vp = vp - 1
+            if(label != "Command Points"){
+                vp.update(n => n - 1)
+            }
         }
       
     }

@@ -1,15 +1,13 @@
 <script>
      import { goto } from '$app/navigation';
-     import { player1 } from '$lib/stores';
-     import { player2 } from '$lib/stores';
+     import { player1Name, player2Name } from '$lib/stores';
 
-
-     let player1Name = ''
-     let player2Name = ''
+     let player1NameInput = ''
+     let player2NameInput = ''
 
      function routeToPage(){
-        player1.set(player1Name);
-        player2.set(player2Name);
+        player1Name.set(player1NameInput);
+        player2Name.set(player2NameInput);
         goto("/battle")
      }
 </script>
@@ -20,11 +18,11 @@
 
 	<div class='split left'>
 		<h1>Player 1</h1>
-        <input bind:value={player1Name} class="input" type="text"><br>
+        <input bind:value={player1NameInput} class="input" type="text"><br>
 	</div>
 	<div  class='split right'>
 		<h1>Player 2</h1>
-        <input  bind:value={player2Name} class="input" type="text"><br>
+        <input  bind:value={player2NameInput} class="input" type="text"><br>
 	</div>
     <br> 
     <br>
