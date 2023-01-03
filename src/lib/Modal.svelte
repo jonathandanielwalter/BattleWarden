@@ -1,6 +1,8 @@
 <script>
 	import { createEventDispatcher, onDestroy } from 'svelte';
 
+    export let winnerName
+
 	const dispatch = createEventDispatcher();
 	const close = () => dispatch('close');
 
@@ -23,7 +25,7 @@
     <img src="/images/victory.jpg" alt="background">
 	<h1 class="text-block">Victory!</h1>
 
-	<slot>Hello here is some text</slot>
+	<h3 class="text-block">{winnerName} has claimed a glorious victory</h3>
     <br>
     <br>
 
@@ -35,7 +37,7 @@
     
     .text-block {
         text-align: center;
-        color: rgb(107, 37, 9);
+        color: rgb(0, 0, 0);
     }
 
 	.modal-background {

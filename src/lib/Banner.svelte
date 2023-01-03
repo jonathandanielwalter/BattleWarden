@@ -7,22 +7,46 @@
     let showModal = false;
     let count = 0;
 
+    export let winnerName
+
     function incriment(){
         count += 1
     }
 
     function submitScore(){
-        showModal = true
-        if (player1Vp > player2Vp){
 
+        let p1Vp = 0
+        let p2Vp = 0
+        let p1Name = ""
+        let p2Name = ""
+
+    
+        player1Name.subscribe(name => (p1Name = name))
+        player2Name.subscribe(name => (p2Name = name))
+        player1Vp.subscribe(vp => (p1Vp = vp))
+        player2Vp.subscribe(vp => (p2Vp = vp))
+
+        console.log("player 1 name : " + p1Name)
+        console.log("player 2 name : " + p2Name)
+
+        console.log("player 1 vp : " + p1Vp)
+        console.log("player 2 vp : " + p2Vp)
+
+        showModal = true
+        if (p1Vp > p2Vp){
+            winnerName = p1Name
+        }else if (p1Vp < p2Vp){
+            winnerName = p2Name
+        }else{
+            winnerName="draw"
         }
 
         let result = {
-
+            player1Name : p1Name,
+            player2Name : p2Name,
+            player1Vp : p1Vp,
+            player2Vp : p2Vp
         }
-
-
-       
 
         doPost(result)
     }
@@ -42,7 +66,7 @@
 
 
 {#if showModal}
-	<Modal on:close="{() => showModal = false}"></Modal>
+	<Modal bind:winnerName={winnerName} on:close="{() => showModal = false}"></Modal>
 {/if}
 
 
