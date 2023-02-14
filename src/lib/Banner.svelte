@@ -52,8 +52,14 @@
     }
 </script>
 
+<!-- <div class="container">
+    <img src="/images/grimdarkness.jpg" alt="background">
+</div> -->
+
+
 <div class="header">
 
+   
     <div>
         <h1>Battle Round {count + 1}</h1>
 

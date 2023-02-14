@@ -35,6 +35,7 @@
 		"@fontsource/fira-mono": "^4.5.0",
 		"@sveltejs/adapter-node": "next",
 		"@sveltejs/kit": "next",
-		"cookie": "^0.4.1"
+		"cookie": "^0.4.1",
+		"svelte-table": "^0.5.5"
 	}
 }

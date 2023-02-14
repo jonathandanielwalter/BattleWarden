@@ -1,6 +1,6 @@
 let result = null
 
-export async function doPost (matchResult: Object) {
+export async function doPost(matchResult: Object) {
     const res = await fetch('http://localhost:8080/recordResult', {
         method: 'POST',
         body: JSON.stringify(matchResult)
@@ -8,4 +8,15 @@ export async function doPost (matchResult: Object) {
 
     const json = await res.json()
 		result = JSON.stringify(json)
+}
+
+export async function get(url: string){
+  try{
+  const res = await fetch(url)
+  console.log(JSON.stringify(res.json))
+  return JSON.stringify(res.json)
+  }catch{
+    console.error("oh dear")
+  }
+
 }
