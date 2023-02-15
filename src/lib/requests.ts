@@ -1,7 +1,7 @@
 let result = null
 
 export async function doPost(matchResult: Object) {
-    const res = await fetch('http://localhost:8080/recordResult', {
+    const res = await fetch('https://crusade-api.fly.dev/recordResult', {
         method: 'POST',
         body: JSON.stringify(matchResult)
     })
