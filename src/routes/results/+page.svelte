@@ -1,6 +1,6 @@
 <script context="module">
     export async function load() {
-      const url = 'http://localhost:8080/recordResult';
+      const url = 'https://crusade-api.fly.dev/recordResult';
       const res = await fetch(url);
       const post = await res.json();
       return {props: {post}}
